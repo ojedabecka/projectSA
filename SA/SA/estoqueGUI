@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+	<h1>ESTOQUE</h1>
+
+<div class="row"><img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 1<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p> 
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 2<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 3<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 4<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 5<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 6<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 7<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 8<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 9<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 10<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 11<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 12<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 13<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 14<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+<img src="C:\Users\Aluno\Documents\naked\TEMPLATE ESTOQUE\template.png">
+<p>PRODUTO 15<br><font size="2">descrição do produto</font><br>valor:<br>quantidade:</p>
+</div>
+</body>
+</html>
