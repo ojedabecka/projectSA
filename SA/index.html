@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sold!</title>
+    <link rel="stylesheet" href="style.css">
+  
+    <script src="sold.js"></script>    
+</head>
+<body>
+    <button class="class_menu" onclick="selecionarTela('Estoque', this, '#00a3cc')">Estoque</button>
+    <button class="class_menu" onclick="selecionarTela('Loja', this,  '#00a3cc')" id="default">Loja</button>
+    <button class="class_menu" onclick="selecionarTela('Vendedor', this,  '#00a3cc')">Vendedor</button>
+    <button class="class_menu" onclick="selecionarTela('Cliente', this,  '#00a3cc')">Cliente</button>
+    <button class="class_menu" onclick="selecionarTela('Vendas', this,  '#00a3cc')">Vendas</button>
+    <button class="class_menu" onclick="selecionarTela('Relatorio', this,  '#00a3cc')">Relatório</button>
+    
+    <span id="Estoque" class="conteudo_tela">
+      
+          
+    </span>
+    
+    <span id="Loja" class="conteudo_tela">    
+    </span>
+    
+    <span id="Vendedor" class="conteudo_tela">      
+    </span>
+    
+    <span id="Cliente" class="conteudo_tela">
+    </span>
+    <span id="Vendas" class="conteudo_tela">
+    </span>
+    <span id="Relatorio" class="conteudo_tela">
+    </span>
+    
+    <script>  
+    function selecionarTela(nome_pagina, elmnt, cor) {
+      
+      var i, conteudo_tela, menus;
+      conteudo_tela = document.getElementsByClassName("conteudo_tela");
+      for (i = 0; i < conteudo_tela.length; i++) {
+        conteudo_tela[i].style.display = "none";
+      }
+    
+      
+      menus = document.getElementsByClassName("class_menu");
+      for (i = 0; i < menus.length; i++) {
+        menus[i].style.backgroundColor = "";
+      }  
+    
+      document.getElementById(nome_pagina).style.display = "block";    
+    
+      elmnt.style.backgroundColor = cor;
+    }        
+    document.getElementById("default").click();
+    </script>
+</body>
+</html>

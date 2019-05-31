@@ -1,0 +1,41 @@
+span{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+/* heigh do html e body em 100% pra ficar no topo" */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+/* Style tab links */
+.class_menu {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 16.66666666666667%;
+  font-weight: bolder;
+}
+
+.class_menu:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.conteudo_tela {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+#Loja {background-color: aqua;}
+#Relatorio{background-color: aqua;}
+#Estoque{background-color: aqua;}
+#Vendas{background-color: aqua;}
+#Vendedor{background-color: aqua;}
+#Cliente{background-color: aqua;}
