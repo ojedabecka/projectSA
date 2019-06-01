@@ -5,7 +5,31 @@ span{
 body, html {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: aqua;
+}
+input[type=text], input[type=tel], input[type=url], input[type=email] {
+  width: 20%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  align-content: center;
+}
+.add{
+    background-color: #00a3cc;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.add:hover{
+  opacity: 0.9;
 }
 
 /* Style tab links */
@@ -28,7 +52,7 @@ body, html {
 
 /* Style the tab content (and add height:100% for full page content) */
 .conteudo_tela {
-  color: white;
+  color: black;
   display: none;
   padding: 100px 20px;
   height: 100%;

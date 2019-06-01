@@ -17,12 +17,19 @@
     <button class="class_menu" onclick="selecionarTela('Vendas', this,  '#00a3cc')">Vendas</button>
     <button class="class_menu" onclick="selecionarTela('Relatorio', this,  '#00a3cc')">Relatório</button>
     
-    <span id="Estoque" class="conteudo_tela">
-      
-          
+    <span id="Estoque" class="conteudo_tela">     
     </span>
     
-    <span id="Loja" class="conteudo_tela">    
+    <span id="Loja" class="conteudo_tela">  
+        <button class="add" onclick="add();">Adicionar</button><br>
+        <form id="formulario" style="display: none;">
+            Nome: <input id="nome" type="text" value=""><br>
+            Telefone: <input id="telefone" type="tel" value=""><br>
+            E-mail: <input id="email" type="email" value=""><br>
+            Site: <input id="site" type="url" value=""><br>
+            <input type="submit" value="Enviar" onclick="salvarInfo();">
+            <input type="reset" value="Voltar" onclick="voltar();">
+          </form>               
     </span>
     
     <span id="Vendedor" class="conteudo_tela">      
@@ -30,31 +37,41 @@
     
     <span id="Cliente" class="conteudo_tela">
     </span>
+
     <span id="Vendas" class="conteudo_tela">
     </span>
+    
     <span id="Relatorio" class="conteudo_tela">
     </span>
     
-    <script>  
-    function selecionarTela(nome_pagina, elmnt, cor) {
+    
+    <script>
       
-      var i, conteudo_tela, menus;
-      conteudo_tela = document.getElementsByClassName("conteudo_tela");
-      for (i = 0; i < conteudo_tela.length; i++) {
-        conteudo_tela[i].style.display = "none";
-      }
-    
-      
-      menus = document.getElementsByClassName("class_menu");
-      for (i = 0; i < menus.length; i++) {
-        menus[i].style.backgroundColor = "";
-      }  
-    
-      document.getElementById(nome_pagina).style.display = "block";    
-    
-      elmnt.style.backgroundColor = cor;
-    }        
-    document.getElementById("default").click();
+  function add(){
+      document.getElementById('formulario').style.display = 'inline'}
+  function voltar(){
+        document.getElementById('formulario').style.display = 'none'}    
+
+  function selecionarTela(nome_pagina, elmnt, cor) {
+  
+  var i, conteudo_tela, menus;
+  conteudo_tela = document.getElementsByClassName("conteudo_tela");
+  for (i = 0; i < conteudo_tela.length; i++) {
+    conteudo_tela[i].style.display = "none";
+  }
+
+  
+  menus = document.getElementsByClassName("class_menu");
+  for (i = 0; i < menus.length; i++) {
+    menus[i].style.backgroundColor = "";
+  }  
+
+  document.getElementById(nome_pagina).style.display = "block";
+  
+
+  elmnt.style.backgroundColor = cor;
+}        
+document.getElementById("default").click();
     </script>
 </body>
 </html>
