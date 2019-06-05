@@ -9,7 +9,7 @@
   
     <script src="sold.js"></script>    
 </head>
-<body>
+<body><h1><img src="C:\Users\Aluno\Documents\naked\S.A\matheus\droga.png"></h1>
     <button class="class_menu" onclick="selecionarTela('Estoque', this, '#00a3cc')">Estoque</button>
     <button class="class_menu" onclick="selecionarTela('Loja', this,  '#00a3cc')" id="default">Loja</button>
     <button class="class_menu" onclick="selecionarTela('Vendedor', this,  '#00a3cc')">Vendedor</button>
@@ -21,14 +21,14 @@
     </span>
     
     <span id="Loja" class="conteudo_tela">  
-        <button class="add" onclick="add();">Adicionar</button><br>
+        <button class="add" id="adc" onclick="add();">Adicionar</button><br>
         <form id="formulario" style="display: none;">
             Nome: <input id="nome" type="text" value=""><br>
-            Telefone: <input id="telefone" type="tel" value=""><br>
+            Telefone: <input maxlength="15" id="telefone" type="text" value=""><br>
             E-mail: <input id="email" type="email" value=""><br>
             Site: <input id="site" type="url" value=""><br>
-            <input type="submit" value="Enviar" onclick="salvarInfo();">
-            <input type="reset" value="Voltar" onclick="voltar();">
+            <input  type="submit" id="env" value="Enviar" onclick="salvarInfo();">
+            <input type="reset" id="volt" value="Voltar" onclick="voltar();">
           </form>               
     </span>
     
@@ -46,6 +46,28 @@
     
     
     <script>
+      function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+  return document.getElementById( el );
+}
+window.onload = function(){
+  id('telefone').onkeyup = function(){
+    mascara( this, mtel );
+  }
+}
       
   function add(){
       document.getElementById('formulario').style.display = 'inline'}

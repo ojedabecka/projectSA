@@ -67,4 +67,3 @@ function imprimirInfo(){
     console.log(localStorage.nomeArray,localStorage.emailArray,localStorage.telefoneArray);
     document.write("Informações salvas e impressas com sucesso!<br>"+"Nome: "+localStorage.nomeArray+"<br>Email: "+localStorage.emailArray+"<br>Telefone: "+localStorage.telefoneArray);
 }
-
