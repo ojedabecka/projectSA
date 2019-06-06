@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GARUTTI</title>
+    <title>Sold!</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+
   
-    <script src="sold.js"></script>    
+    <script src="sold.js"></script>  
+    
 </head>
-<body><h1><img src="droga.png"></h1>
+<body>
+  <h1><img src=C:\Matheus\projectSA/logo12.png></h1>
     <button class="class_menu" onclick="selecionarTela('Estoque', this, '#00a3cc')">Estoque</button>
     <button class="class_menu" onclick="selecionarTela('Loja', this,  '#00a3cc')" id="default">Loja</button>
     <button class="class_menu" onclick="selecionarTela('Vendedor', this,  '#00a3cc')">Vendedor</button>
@@ -22,23 +26,65 @@
     
     <span id="Loja" class="conteudo_tela">  
         <button class="add" id="adc" onclick="add();">Adicionar</button><br>
+        
         <form id="formulario" style="display: none;">
             Nome: <input id="nome" type="text" value=""><br>
-            Telefone: <input maxlength="15" id="telefone" type="text" value=""><br>
+            Telefone: <input maxlength="15" id="telefone"  type="text" value=""><br>
             E-mail: <input id="email" type="email" value=""><br>
             Site: <input id="site" type="url" value=""><br>
-            <input  type="submit" id="env" value="Enviar" onclick="salvarInfo();">
-            <input type="reset" id="volt" value="Voltar" onclick="voltar();">
-          </form>               
+            <input type="submit" id="enviar" value="Enviar" onclick="salvarInfo();">
+            <input type="reset" id="voltar" value="Voltar" onclick="voltar();">
+          </form> 
+        </div>              
     </span>
     
-    <span id="Vendedor" class="conteudo_tela">      
+    <span id="Vendedor" class="conteudo_tela">   
+         
     </span>
     
     <span id="Cliente" class="conteudo_tela">
     </span>
 
     <span id="Vendas" class="conteudo_tela">
+      <!--<p id="a"> Loja Data de vendas Hórario Vendedor Cliente Valor Total </p>-->
+       <table id="cornoarrombado">
+        <tr class="corno_manso">
+          <th>Loja</th>
+          <th>Data de Vendas</th>
+          <th>Hórario</th>
+          <th>Vendedor</th>
+          <th>Cliente</th>
+          <th>Valor total</th>
+        </tr>
+        <tr>
+          <td>Garruti</td>
+          <td> 12/12/12</td>
+          <td>20:48</td>
+          <td>Matheus</td>
+          <td>Gustavo</td>
+          <td>534,34$</td>
+ 
+        </tr>
+        <tr>
+            <td>Garruti</td>
+            <td> 12/12/14</td>
+            <td>20:41</td>
+            <td>Matheus</td>
+            <td>Gustavo</td>
+            <td>534,34$</td>
+   
+          </tr>
+
+      </table>
+      
+        
+
+      
+
+
+
+
+
     </span>
     
     <span id="Relatorio" class="conteudo_tela">
@@ -61,12 +107,12 @@ function mtel(v){
     return v;
 }
 function id( el ){
-  return document.getElementById( el );
+	return document.getElementById( el );
 }
 window.onload = function(){
-  id('telefone').onkeyup = function(){
-    mascara( this, mtel );
-  }
+	id('telefone').onkeyup = function(){
+		mascara( this, mtel );
+	}
 }
       
   function add(){
@@ -94,7 +140,11 @@ window.onload = function(){
   elmnt.style.backgroundColor = cor;
 }        
 document.getElementById("default").click();
+
+
+
+
     </script>
-	<h3>Garutti | Av. Mauro Ramos 165 | CNPJ:35.372.238/2736-78 | (48) 99116-4826 | garuttinho@contato.com</h3>
+    <h3>Garutti | Av. Mauro Ramos 165 | CNPJ:35.372.238/2736-78 | (48) 99116-4826 | garuttinho@contato.com</h3>
 </body>
 </html>
