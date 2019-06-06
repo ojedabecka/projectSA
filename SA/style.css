@@ -151,18 +151,30 @@ background-color:lightblue;
 
 }
 /*Edição em bloco da vendas*/ 
-#cornoarrombado{
+#lojatabela{
+  background:black;
+  color:white;
+  margin:auto;
+}
+#estoquetabela{
+  background:black;
+ color:white;
+ margin:auto;
+}
+#vendedortabela{
+  background:black;
+ color:white;
+ margin:auto;
+}
+#clientabela{
+  background:black;
+  color:white;
+  margin:auto;
+}
+#vendatabela,#clientetabela{
  background:black;
  color:white;
  margin:auto;
- 
- 
-
-
-}
-.corno_manso{
-  
-  
 }
 td{
   width:200px;
@@ -170,9 +182,6 @@ td{
   color:black;
   background-color:#99b3ff;
   font-family: 'Fira Sans', sans-serif;
-  
-  
-
 }
 #Vendedor{background-color:lightblue;}
 #Cliente{background-color:lightblue;}
