@@ -1,7 +1,7 @@
 span{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
-/* height do html e body em 100% pra ficar no topo" */
+/* heigh do html e body em 100% pra ficar no topo" */
 body, html {
   height: 100%;
   margin: 0 auto;
@@ -14,62 +14,65 @@ input[type=text], input[type=tel], input[type=url], input[type=email] {
   width: 20%;
   padding: 12px 10px;
   margin: 8px 0;
-  display: inline-block;
-  border: 1px solid rgb(212, 21, 21);
+  display:inline-block;
+  border: 1px solid #ccc;
   box-sizing: border-box;
   align-content: center;
+  
 }
+
 h1{
   text-align: center;
 }
 h3 {
-		text-align:center;
-		color: white;
-		background-color: #79aab7;
-		margin-bottom: 0px;
-		font-size: 16px;
+  text-align:center;
+  color: white;
+  background-color: #79aab7;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+
+.add{
+    background-color: #170149;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
 }
 #adc:hover{
-  cursor: pointer;
+  cursor:pointer;
 }
-#volt{
-    background-color: #000000;
-    border: none;
-    color: white;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
+#voltar{
+  background-color: #170149;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
 }
-#volt:hover{
-   cursor: pointer;
+#voltar:hover{
+  cursor:pointer;
 }
-#env{
-    background-color: #000000;
-    border: none;
-    color: white;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
+#enviar{
+  background-color: #170149;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
 }
-#env:hover{
- cursor: pointer;
-}
-.add{
-    background-color: #000000;
-    border: none;
-    color: white;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
+#enviar:hover{
+  cursor:pointer;
 }
 .add:hover{
   opacity: 0.9;
@@ -77,7 +80,7 @@ h3 {
 
 /* Style tab links */
 .class_menu {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
   float: left;
   border: none;
@@ -92,22 +95,24 @@ h3 {
 .class_menu:hover {
   background-color: #777;
 }
-#nome{
-  padding: 10px;
-  margin-left: 25px;
-}
 #telefone{
-  padding: 10px;
-  margin-left: 10px;
+  padding:10px;
+  margin-left:10px;
 }
 #email{
-  padding: 10px;
-  margin-left: 25px;
+  padding:10px;
+  margin-left:25px;
 }
 #site{
-  padding: 10px;
-  margin-left: 42px;
+  padding:10px;
+  margin-left:42px;
 }
+#nome{
+  padding:10px;
+  margin-left:25px;
+}
+
+
 /* Style the tab content (and add height:100% for full page content) */
 .conteudo_tela {
   color: black;
@@ -115,9 +120,59 @@ h3 {
   padding: 100px 20px;
   height: 100%;
 }
-#Loja {background-color:lightblue;}
+.lista {
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 20px;
+  word-wrap: break-word;
+}
+#principal{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 16.66666666666667%;
+  font-weight: bolder;
+}
+
+
+
+#Loja {
+background-color:lightblue;
+}
+
 #Relatorio{background-color:lightblue;}
 #Estoque{background-color:lightblue;}
-#Vendas{background-color:lightblue;}
+#Vendas{
+  background-color:lightblue;
+
+}
+/*Edição em bloco da vendas*/ 
+#cornoarrombado{
+ background:black;
+ color:white;
+ margin:auto;
+ 
+ 
+
+
+}
+.corno_manso{
+  
+  
+}
+td{
+  width:200px;
+  text-align:center;
+  color:black;
+  background-color:#99b3ff;
+  font-family: 'Fira Sans', sans-serif;
+  
+  
+
+}
 #Vendedor{background-color:lightblue;}
 #Cliente{background-color:lightblue;}
