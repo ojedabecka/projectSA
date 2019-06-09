@@ -1,15 +1,33 @@
-form {
-  border: 3px solid #f1f1f1;
-}  
+*{
+  box-sizing: border-box;
+}
 
-input[type=text], input[type=password] {
+form {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 50%;
+  margin: 0 auto;
+} 
+
+h1 {
+  text-align: center;
+}
+
+body{
+  background-color: lightblue;
+}
+
+input{
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  text-align: center;
+  margin-left: 10px;
 }  
+
+input[type=checkbox]{
+  width: auto;
+}
 
 button {
   background-color: #00a3cc;
@@ -19,13 +37,22 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+  text-align: center;
 }  
 
 button:hover {
   opacity: 0.8;
 } 
 
-.container {
-  padding: 16px;
-}  
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+
+}
+.input-wrapper{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
 
