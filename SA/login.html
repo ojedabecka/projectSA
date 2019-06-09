@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sold!</title>
-    <link rel="stylesheet" href="style_login.css">
-    <script src="cadastro.js"></script>
-</head>
+  <html lang="pt-br">
+  <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <title>Login Garutti</title>
+       <link rel="stylesheet" href="style_login.css">
+       <script src="cadastro.js"></script>
+       <h1><img src="droga.png"></h1>
+    </head>
     <body>
-        <form>
-        <div>
-        <label for="usuario"><b>Usuário:<b></label>
-        <input type="text" id="loginAutenticacao" placeholder="Usuario" value="">        
-        
-        <label for="senha"><b>Senha:</b></label>
-        <input type="password" id="senhaAutenticacao" placeholder="Senha" value="">
+        <div class="wrapper">
+            <form>
+                <div class="input-wrapper">
+                    <label for="usuario"><b>Usuário:</b></label>
+                    <input type="text" id="usuario" placeholder="Usuario" value=""> 
+                </div>
 
-        <button type="submit" value="Logar" onclick="logar()">Logar</button>
-        <label>
-            <input type="checkbox" name="lembrar">Mantenha-me conectado
-        </label>
-        </div>        
-        </form>
+                <div class="input-wrapper">
+                    <label for="senha"><b>Senha:</b></label>
+                    <input type="password" id="senha" placeholder="Senha" value="">
+                </div>
 
-    
-</body>
-</html>
+                <div class="input-wrapper">
+                    <button type="submit" value="Logar" onclick="logar()">Logar</button>
+                </div>
+
+                <label>
+                    <p>
+                        <input type="checkbox" name="lembrar">Mantenha-me conectado
+                    </p>
+                </label>
+            </form> 
+        </div>  
+         
+    </body>
+    </html>
