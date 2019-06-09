@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sold!</title>
+    <title>Garutti</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
-
-  
     <script src="sold.js"></script>  
     
 </head>
 <body>
-  <h1><img src=C:\Matheus\projectSA/logo12.png></h1>
+  <h1><img src=droga.png></h1>
     <button class="class_menu" onclick="selecionarTela('Estoque', this, '#00a3cc')">Estoque</button>
-    <button class="class_menu" onclick="selecionarTela('Loja', this,  '#00a3cc')" id="default">Loja</button>
+    <button class="class_menu" onclick="selecionarTela('Loja', this,  '#00a3cc')" id="default">Filiais</button>
     <button class="class_menu" onclick="selecionarTela('Vendedor', this,  '#00a3cc')">Vendedor</button>
     <button class="class_menu" onclick="selecionarTela('Cliente', this,  '#00a3cc')">Cliente</button>
     <button class="class_menu" onclick="selecionarTela('Vendas', this,  '#00a3cc')">Vendas</button>
@@ -39,9 +37,10 @@
     </span>
     
     <span id="Loja" class="conteudo_tela">  
+       <button class="add" id="adc" onclick="add();">Adicionar Filial</button><br>
         <table id="lojatabela">
             <tr class="formatacao_tabela">
-              <th>Nome</th>
+              <th>Gerente</th>
               <th>Telefone</th>
               <th>E-mail</th>
               <th>Endereço Eletrônico</th>
@@ -53,10 +52,10 @@
               <td>www.garruti.com.br</td>
             </tr>
           </table>
-        <button class="add" id="adc" onclick="add();">Adicionar</button><br>
+       
         
         <form id="formulario" style="display: none;">
-            Nome: <input id="nome" type="text" value=""><br>
+            Gerente: <input id="nome" type="text" value=""><br>
             Telefone: <input maxlength="15" id="telefone"  type="text" value=""><br>
             E-mail: <input id="email" type="email" value=""><br>
             Site: <input id="site" type="url" value=""><br>
@@ -65,8 +64,10 @@
           </form> 
         </div>              
     </span>
+
     
     <span id="Vendedor" class="conteudo_tela">  
+        <button class="addvendedor" id="adc" onclick="add();">Adicionar vendedor!</button><br>
         <table id="vendedortabela">
             <tr class="formatacao_tabela">
               <th>Nome</th>
@@ -81,10 +82,10 @@
               <td>Gerente</td>
             </tr>
           </table> 
-         
     </span>
     
     <span id="Cliente" class="conteudo_tela">
+        <button class="addcliente" id="adc" onclick="add();">Adicionar cliente!</button><br>
         <table id="clientabela">
             <tr class="formatacao_tabela">
               <th>Nome</th>
@@ -93,10 +94,28 @@
               <th>E-mail</th>
             </tr>
             <tr>
-              <td>Matheus Coelho Nunes</td>
+              <td>Lucas Nunes</td>
               <td> Praia Mole</td>
               <td>(48)99867-1150</td>
               <td>Matheuscoelho70@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Alice Freitas</td>
+              <td>Campeche</td>
+              <td>(48)9213-8238</td>
+              <td>alicezinha@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Brenda Campos</td>
+              <td>Trindade</td>
+              <td>(48)8789-5468</td>
+              <td>camposbrendaa@gmail.com</td>
+            </tr>
+                        <tr>
+              <td>Luis Pereira</td>
+              <td>Centro</td>
+              <td>(48)7983-2372</td>
+              <td>luizinho@gmail.com</td>
             </tr>
           </table>
     </span>
@@ -113,7 +132,7 @@
           <th>Valor total</th>
         </tr>
         <tr>
-          <td>Garruti</td>
+          <td>Garutti</td>
           <td> 12/12/12</td>
           <td>20:48</td>
           <td>Matheus</td>
@@ -122,7 +141,7 @@
  
         </tr>
         <tr>
-            <td>Garruti</td>
+            <td>Garutti</td>
             <td> 12/12/14</td>
             <td>20:41</td>
             <td>Matheus</td>
@@ -130,7 +149,6 @@
             <td>R$534,34</td>
    
           </tr>
-
       </table>
     </span>
     
