@@ -19,7 +19,21 @@
     <button class="class_menu" onclick="selecionarTela('Vendas', this,  '#00a3cc')">Vendas</button>
     <button class="class_menu" onclick="selecionarTela('Relatorio', this,  '#00a3cc')">Relatório</button>
     
-    <span id="Estoque" class="conteudo_tela">   
+    <span id="Estoque" class="conteudo_tela">
+        <button onclick="openForm('formulario_produtos');" class="open-button">Adicionar Produto</button>      
+        <div class="form-popup" id="formulario_produtos">
+            <form class="form-container">                       
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Adicionar</button>
+              
+              <button type="submit" class="btn cancel" onclick="closeForm('formulario_produtos')">Cancelar</button>
+            </form>
+          </div>   
         <table id="estoquetabela">
             <tr class="formatacao_tabela">
               <th>Código do Produto</th>
@@ -37,7 +51,20 @@
     </span>
     
     <span id="Loja" class="conteudo_tela">  
-       <button class="add" id="adc" onclick="add();">Adicionar Filial</button><br>
+        <button onclick="openForm('formulario_filiais');" class="open-button">Adicionar Filial</button>      
+        <div class="form-popup" id="formulario_filiais">
+            <form class="form-container">                       
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Adicionar</button>
+              
+              <button type="submit" class="btn cancel" onclick="closeForm('formulario_filiais')">Cancelar</button>
+            </form>
+          </div>
         <table id="lojatabela">
             <tr class="formatacao_tabela">
               <th>Gerente</th>
@@ -54,20 +81,25 @@
           </table>
        
         
-        <form id="formulario" style="display: none;">
-            Gerente: <input id="nome" type="text" value=""><br>
-            Telefone: <input maxlength="15" id="telefone"  type="text" value=""><br>
-            E-mail: <input id="email" type="email" value=""><br>
-            Site: <input id="site" type="url" value=""><br>
-            <input type="submit" id="enviar" value="Enviar" onclick="salvarInfo();">
-            <input type="reset" id="voltar" value="Voltar" onclick="voltar();">
-          </form> 
-        </div>              
+               
     </span>
 
     
     <span id="Vendedor" class="conteudo_tela">  
-        <button class="addvendedor" id="adc" onclick="add();">Adicionar vendedor!</button><br>
+        <button onclick="openForm('formulario_vendedor');" class="open-button">Adicionar Vendedor</button>      
+        <div class="form-popup" id="formulario_vendedor">
+            <form class="form-container">                       
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Adicionar</button>
+              
+              <button type="submit" class="btn cancel" onclick="closeForm('formulario_vendedor')">Cancelar</button>
+            </form>
+          </div>
         <table id="vendedortabela">
             <tr class="formatacao_tabela">
               <th>Nome</th>
@@ -85,7 +117,20 @@
     </span>
     
     <span id="Cliente" class="conteudo_tela">
-        <button class="addcliente" id="adc" onclick="add();">Adicionar cliente!</button><br>
+        <button onclick="openForm('formulario_clientes');" class="open-button">Adicionar Cliente</button>      
+        <div class="form-popup" id="formulario_clientes">
+            <form class="form-container">                       
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Adicionar</button>
+              
+              <button type="submit" class="btn cancel" onclick="closeForm('formulario_clientes')">Cancelar</button>
+            </form>
+          </div>
         <table id="clientabela">
             <tr class="formatacao_tabela">
               <th>Nome</th>
@@ -121,6 +166,20 @@
     </span>
 
     <span id="Vendas" class="conteudo_tela">
+        <button onclick="openForm('formulario_vendas');" class="open-button">Adicionar Venda</button>      
+        <div class="form-popup" id="formulario_vendas">
+            <form class="form-container">                       
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Adicionar</button>
+              
+              <button type="submit" class="btn cancel" onclick="closeForm('formulario_vendas')">Cancelar</button>
+            </form>
+          </div>
       <!--<p id="a"> Loja Data de vendas Hórario Vendedor Cliente Valor Total </p>-->
        <table id="vendatabela">
         <tr class="formatacao_tabela">
@@ -153,63 +212,11 @@
     </span>
     
     <span id="Relatorio" class="conteudo_tela">
+        
     </span>
     
     
-    <script>
-      function mascara(o,f){
-    v_obj=o
-    v_fun=f
-    setTimeout("execmascara()",1)
-}
-function execmascara(){
-    v_obj.value=v_fun(v_obj.value)
-}
-function mtel(v){
-    v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
-    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
-    return v;
-}
-function id( el ){
-	return document.getElementById( el );
-}
-window.onload = function(){
-	id('telefone').onkeyup = function(){
-		mascara( this, mtel );
-	}
-}
-      
-  function add(){
-      document.getElementById('formulario').style.display = 'inline'}
-  function voltar(){
-        document.getElementById('formulario').style.display = 'none'}    
-
-  function selecionarTela(nome_pagina, elmnt, cor) {
-  
-  var i, conteudo_tela, menus;
-  conteudo_tela = document.getElementsByClassName("conteudo_tela");
-  for (i = 0; i < conteudo_tela.length; i++) {
-    conteudo_tela[i].style.display = "none";
-  }
-
-  
-  menus = document.getElementsByClassName("class_menu");
-  for (i = 0; i < menus.length; i++) {
-    menus[i].style.backgroundColor = "";
-  }  
-
-  document.getElementById(nome_pagina).style.display = "block";
-  
-
-  elmnt.style.backgroundColor = cor;
-}        
-document.getElementById("default").click();
-
-
-
-
-    </script>
+    <script src="setup.js"></script>
     <h3>Garutti | Av. Mauro Ramos 165 | CNPJ:35.372.238/2736-78 | (48) 99116-4826 | garuttinho@contato.com</h3>
 </body>
 </html>

@@ -1,3 +1,60 @@
+
+.open-button {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top:355px;
+   
+}
+.form-popup {
+  display: none;  
+  
+}
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #3899fa;
+  margin-left: 500px;
+}
+.form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=password]{
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 0.8;
+}
+
 span{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
@@ -176,31 +233,12 @@ background-color:lightblue;
 
 }
 /*Edição em bloco da vendas*/ 
-#lojatabela{
+#lojatabela,#estoquetabela,#vendedortabela,#clientabela,#vendatabela,#clientetabela{
   background:black;
   color:white;
   margin:auto;
 }
-#estoquetabela{
-  background:black;
- color:white;
- margin:auto;
-}
-#vendedortabela{
-  background:black;
- color:white;
- margin:auto;
-}
-#clientabela{
-  background:black;
-  color:white;
-  margin:auto;
-}
-#vendatabela,#clientetabela{
- background:black;
- color:white;
- margin:auto;
-}
+
 td{
   width:200px;
   text-align:center;
