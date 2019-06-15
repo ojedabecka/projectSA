@@ -5,7 +5,7 @@
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top:355px;
    
 }
@@ -16,8 +16,10 @@
 .form-container {
   max-width: 300px;
   padding: 10px;
-  background-color: #3899fa;
-  margin-left: 500px;
+  background-color: #3094b4;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 50px; 
 }
 .form-container input[type=text] {
   width: 100%;
@@ -39,7 +41,7 @@
   outline: none;
 }
 .form-container .btn {
-  background-color: #4CAF50;
+  background-color: #60c8ea;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -49,7 +51,7 @@
   opacity: 0.8;
 }
 .form-container .cancel {
-  background-color: red;
+  background-color: #00000070;
 }
 .form-container .btn:hover, .open-button:hover {
   opacity: 0.8;
