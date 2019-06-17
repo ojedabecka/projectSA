@@ -15,6 +15,7 @@
 }
 .form-container {
   max-width: 300px;
+  position: absolute;
   padding: 10px;
   background-color: #3094b4;
   margin-left: 0px;
