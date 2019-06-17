@@ -19,25 +19,7 @@
     <button class="class_menu" onclick="selecionarTela('Vendas', this,  '#00a3cc')">Vendas</button>
     <button class="class_menu" onclick="selecionarTela('Relatorio', this,  '#00a3cc')">Relatório</button>
     
-    <span id="Estoque" class="conteudo_tela">
-        <button onclick="openForm('formulario_produtos');" class="open-button">Adicionar Produto</button>      
-        <div class="form-popup" id="formulario_produtos">
-            <form class="form-container">                       
-              <label for="codigo"><b>Código:</b></label>
-              <input type="text" placeholder="Codigo" name="codigo" required>
-          
-              <label for="descricao"><b>Descrição:</b></label>
-              <input type="text" placeholder="Descrição" name="descricao" required>
-              <labeL for="quantidade"><b>Quantidade em Estoque:</b></labeL>
-              <input type="number" name="quantidade" placeholder="Quantidade em Estoque" required>
-              <label for="valor"><b>Valor:</b></label>
-              <input type="number" name="valor" placeholder="Valor" required>              
-       
-              <button type="submit" class="btn">Adicionar</button>
-              
-              <button type="submit" class="btn cancel" onclick="closeForm('formulario_produtos')">Cancelar</button>
-            </form>
-          </div>   
+    <span id="Estoque" class="conteudo_tela">   
         <table id="estoquetabela">
             <tr class="formatacao_tabela">
               <th>Código do Produto</th>
@@ -55,24 +37,7 @@
     </span>
     
     <span id="Loja" class="conteudo_tela">  
-        <button onclick="openForm('formulario_filiais');" class="open-button">Adicionar Filial</button>      
-        <div class="form-popup" id="formulario_filiais">
-            <form class="form-container">                       
-              <label for="Gerente"><b>Gerente:</b></label>
-              <input type="text" placeholder="Gerente" name="Gerente" required>
-          
-              <label for="telefone"><b>Telefone:</b></label>
-              <input type="tel" placeholder="Telefone" name="telefone" required>
-              <label for="email"><strong>E-mail:</strong></label>
-              <input type="email" placeholder="E-mail" required>
-              <label for="site"><strong>Endereço Eletrônico</strong></label>
-              <input type="url" placeholder="Endereço Eletrônico" required>
-          
-              <button type="submit" class="btn">Adicionar</button>
-              
-              <button type="submit" class="btn cancel" onclick="closeForm('formulario_filiais')">Cancelar</button>
-            </form>
-          </div>
+       <button class="add" id="adc" onclick="add();">Adicionar Filial</button><br>
         <table id="lojatabela">
             <tr class="formatacao_tabela">
               <th>Gerente</th>
@@ -89,33 +54,24 @@
           </table>
        
         
-               
+        <form id="formulario" style="display: none;">
+            Gerente: <input id="nome" type="text" value=""><br>
+            Telefone: <input maxlength="15" id="telefone"  type="text" value=""><br>
+            E-mail: <input id="email" type="email" value=""><br>
+            Site: <input id="site" type="url" value=""><br>
+            <input type="submit" id="enviar" value="Enviar" onclick="salvarInfo();">
+            <input type="reset" id="voltar" value="Voltar" onclick="voltar();">
+          </form> 
+        </div>              
     </span>
 
     
     <span id="Vendedor" class="conteudo_tela">  
-        <button onclick="openForm('formulario_vendedor');" class="open-button">Adicionar Vendedor</button>      
-        <div class="form-popup" id="formulario_vendedor">
-            <form class="form-container">                       
-              <label for="email"><b>Nome:</b></label>
-              <input type="text" placeholder="Nome" name="email" required>
-          
-              <label for="matricula"><b>Matricula:</b></label>
-              <input type="text" placeholder="Matricula" name="matricula" required>
-              <label for="data_admissão"><strong>Data de Admissão:</strong></label>
-              <input type="date" placeholder="Data de Admissão" name="data" required>
-              <label for="cargo"><strong>Cargo:</strong></label>
-              <input type="text" name="cargo" required placeholder="Cargo">
-          
-              <button type="submit" class="btn">Adicionar</button>
-              
-              <button type="submit" class="btn cancel" onclick="closeForm('formulario_vendedor')">Cancelar</button>
-            </form>
-          </div>
+        <button class="addvendedor" id="adc" onclick="add();">Adicionar vendedor!</button><br>
         <table id="vendedortabela">
             <tr class="formatacao_tabela">
               <th>Nome</th>
-              <th>Matricula</th>
+              <th>Código</th>
               <th>Data de Admissão</th>
               <th>Cargo</th>
             </tr>
@@ -129,24 +85,7 @@
     </span>
     
     <span id="Cliente" class="conteudo_tela">
-        <button onclick="openForm('formulario_clientes');" class="open-button">Adicionar Cliente</button>      
-        <div class="form-popup" id="formulario_clientes">
-            <form class="form-container">                       
-              <label for="Nome"><b>Nome:</b></label>
-              <input type="text" placeholder="Nome" name="Nome" required>
-          
-              <label for="endereco"><b>Endereço:</b></label>
-              <input type="text" placeholder="Endereço" name="endereco" required>
-              <label for="telefone"><strong>Telefone:</strong></label>
-              <input type="tel" name="telefone_cliente" required placeholder="Telefone">
-              <label for="email"><strong>E-mail:</strong></label>
-              <input type="email" name="email_cliente" required placeholder="E-mail">
-          
-              <button type="submit" class="btn">Adicionar</button>
-              
-              <button type="submit" class="btn cancel" onclick="closeForm('formulario_clientes')">Cancelar</button>
-            </form>
-          </div>
+        <button class="addcliente" id="adc" onclick="add();">Adicionar cliente!</button><br>
         <table id="clientabela">
             <tr class="formatacao_tabela">
               <th>Nome</th>
@@ -181,7 +120,7 @@
           </table>
     </span>
 
-    <span id="Vendas" class="conteudo_tela">        
+    <span id="Vendas" class="conteudo_tela">
       <!--<p id="a"> Loja Data de vendas Hórario Vendedor Cliente Valor Total </p>-->
        <table id="vendatabela">
         <tr class="formatacao_tabela">
@@ -214,11 +153,63 @@
     </span>
     
     <span id="Relatorio" class="conteudo_tela">
-        
     </span>
     
     
-    <script src="setup.js"></script>
+    <script>
+      function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('telefone').onkeyup = function(){
+		mascara( this, mtel );
+	}
+}
+      
+  function add(){
+      document.getElementById('formulario').style.display = 'inline'}
+  function voltar(){
+        document.getElementById('formulario').style.display = 'none'}    
+
+  function selecionarTela(nome_pagina, elmnt, cor) {
+  
+  var i, conteudo_tela, menus;
+  conteudo_tela = document.getElementsByClassName("conteudo_tela");
+  for (i = 0; i < conteudo_tela.length; i++) {
+    conteudo_tela[i].style.display = "none";
+  }
+
+  
+  menus = document.getElementsByClassName("class_menu");
+  for (i = 0; i < menus.length; i++) {
+    menus[i].style.backgroundColor = "";
+  }  
+
+  document.getElementById(nome_pagina).style.display = "block";
+  
+
+  elmnt.style.backgroundColor = cor;
+}        
+document.getElementById("default").click();
+
+
+
+
+    </script>
     <h3>Garutti | Av. Mauro Ramos 165 | CNPJ:35.372.238/2736-78 | (48) 99116-4826 | garuttinho@contato.com</h3>
 </body>
 </html>

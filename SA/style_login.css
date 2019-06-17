@@ -4,14 +4,9 @@
 
 form {
   font-family: 'Source Sans Pro', sans-serif;
-  
+  width: 50%;
   margin: 0 auto;
 } 
-
-label {
-	width: 70px;
-
-}
 
 h1 {
   text-align: center;
@@ -22,7 +17,7 @@ body{
 }
 
 input{
-  width: calc(100% - 70px);
+  width: 100%;
   padding: 12px 20px;
   display: inline-block;
   border: 1px solid #ccc;
@@ -50,9 +45,8 @@ button:hover {
 } 
 
 .wrapper {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
-
 
 }
 .input-wrapper{
