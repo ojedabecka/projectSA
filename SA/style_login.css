@@ -15,9 +15,15 @@ h1 {
 body{
   background-color: lightblue;
 }
+label {
+	width: 70px;
+
+}
+
 
 input{
   width: 100%;
+  width: calc(100% - 70px);
   padding: 12px 20px;
   display: inline-block;
   border: 1px solid #ccc;
