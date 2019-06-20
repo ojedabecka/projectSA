@@ -4,20 +4,33 @@
     <meta charset="utf-8">
     <script src="cadastro.js" charset="utf-8"></script>
     <title>Sold!</title>
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="cadastro_style.css">
   </head>
   <body>
-    <form>
-    <label><b>Usuário:</b></label>
-    <input type="text" id="login" value=""><br>
-    <label><b>Senha:</b></label>
-    <input type="password" id="senha" value=""><br>
-    <label><b>Repitir Senha:</b></label>
-    <input type="password" id="repSenha" value=""><br>
+  <h1> <img src="droga.png"></img>
+	 <div class="wrapper">
+             <form>
+                <div class="input-wrapper">
+                    <label><b>Usuário:</b></label>
+                     <input type="text" id="login" value=""><br>
+                </div>
 
-    <button id ="cadastrar" type="submit" value="Cadastrar" onclick="cadastrarDados()">Cadastrar</button>
-    </form>
-
-    
+                <div class="input-wrapper">
+                    <label><b>Senha:</b></label>
+                    <input type="password" id="senha" value=""><br>
+                </div>
+				 <div class="input-wrapper">
+                    <label><b>Confirme a senha:</b></label>
+                    <input type="password" id="repSenha" value=""><br>
+                </div>
+                <div class="input-wrapper"> 
+				<p>
+                 <button id ="cadastrar" type="submit" value="Cadastrar" onclick="cadastrarDados()">Cadastrar</button>
+				 </p>
+                </div>
+            </form> 
+        </div>  
+         
   </body>
+ 
 </html>
