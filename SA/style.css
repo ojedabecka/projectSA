@@ -13,6 +13,18 @@
   display: none;  
   
 }
+.botoesLoja:hover{
+  cursor: pointer;
+}
+.botoesLoja{
+  align-content: center;
+}
+.selectLoja{
+  text-align: center;
+}
+.loja-elemnt{
+  text-align: center;
+}
 .form-container {
   max-width: 300px;
   position: absolute;

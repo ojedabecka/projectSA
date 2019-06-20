@@ -12,8 +12,8 @@
 </head>
 <body>
   <h1><img src=droga.png></h1>
-    <button class="class_menu" onclick="selecionarTela('Estoque', this, '#00a3cc')">Estoque</button>
-    <button class="class_menu" onclick="selecionarTela('Loja', this,  '#00a3cc')" id="default">Filiais</button>
+    <button class="class_menu" onclick="selecionarTela('Estoque', this, '#00a3cc')"id="default">Estoque</button>
+    <button class="class_menu" onclick="selecionarTela('Loja', this,  '#00a3cc')" >Filiais</button>
     <button class="class_menu" onclick="selecionarTela('Vendedor', this,  '#00a3cc')">Vendedor</button>
     <button class="class_menu" onclick="selecionarTela('Cliente', this,  '#00a3cc')">Cliente</button>
     <button class="class_menu" onclick="selecionarTela('Vendas', this,  '#00a3cc')">Vendas</button>
@@ -24,16 +24,15 @@
         <div class="form-popup" id="formulario_produtos">
             <form class="form-container">                       
               <label for="codigo"><b>Código:</b></label>
-              <input type="text" placeholder="Codigo" name="codigo" required>
-          
+              <input id="codigo1" type="text" placeholder="Codigo" name="codigo" required>
               <label for="descricao"><b>Descrição:</b></label>
-              <input type="text" placeholder="Descrição" name="descricao" required>
+              <input id="descricao1" type="text" placeholder="Descrição" name="descricao" required>
               <labeL for="quantidade"><b>Quantidade em Estoque:</b></labeL>
-              <input type="number" name="quantidade" placeholder="Quantidade em Estoque" required>
+              <input id="quantidade1" type="number" name="quantidade" placeholder="Quantidade em Estoque" required>
               <label for="valor"><b>Valor:</b></label>
-              <input type="number" name="valor" placeholder="Valor" required>              
+              <input id="valor1" type="number" name="valor" placeholder="Valor" required>              
        
-              <button type="submit" class="btn">Adicionar</button>
+              <button type="submit" class="btn" onclick="salvarInfoEstoque()">Adicionar</button>
               
               <button type="submit" class="btn cancel" onclick="closeForm('formulario_produtos')">Cancelar</button>
             </form>
@@ -59,16 +58,15 @@
         <div class="form-popup" id="formulario_filiais">
             <form class="form-container">                       
               <label for="Gerente"><b>Gerente:</b></label>
-              <input type="text" placeholder="Gerente" name="Gerente" required>
-          
+              <input id="gerenteFil" type="text" placeholder="Gerente" name="Gerente" required>
               <label for="telefone"><b>Telefone:</b></label>
-              <input type="tel" placeholder="Telefone" name="telefone" required>
-              <label for="email"><strong>E-mail:</strong></label>
-              <input type="email" placeholder="E-mail" required>
+              <input id="telefoneFil" type="tel" placeholder="Telefone" name="telefone" required>
+              <label  for="email"><strong>E-mail:</strong></label>
+              <input id="emailFil" type="email" placeholder="E-mail" required>
               <label for="site"><strong>Endereço Eletrônico</strong></label>
-              <input type="url" placeholder="Endereço Eletrônico" required>
+              <input id="siteFil" type="text" placeholder="Endereço Eletrônico/Site" required>
           
-              <button type="submit" class="btn">Adicionar</button>
+              <button type="submit" class="btn" onclick="salvarInfoFiliais()">Adicionar</button>
               
               <button type="submit" class="btn cancel" onclick="closeForm('formulario_filiais')">Cancelar</button>
             </form>
@@ -86,10 +84,7 @@
               <td>Matheuscoelho70@gmail.com</td>
               <td>www.garruti.com.br</td>
             </tr>
-          </table>
-       
-        
-               
+          </table>   
     </span>
 
     
@@ -98,16 +93,15 @@
         <div class="form-popup" id="formulario_vendedor">
             <form class="form-container">                       
               <label for="email"><b>Nome:</b></label>
-              <input type="text" placeholder="Nome" name="email" required>
-          
+              <input type="text" placeholder="Nome" name="email" required>       
               <label for="matricula"><b>Matricula:</b></label>
-              <input type="text" placeholder="Matricula" name="matricula" required>
+              <input id="matricula1" type="text" placeholder="Matricula" name="matricula" required>
               <label for="data_admissão"><strong>Data de Admissão:</strong></label>
-              <input type="date" placeholder="Data de Admissão" name="data" required>
+              <input id="data1" type="date" placeholder="Data de Admissão(dd/mm/aaaa)" name="data" required>
               <label for="cargo"><strong>Cargo:</strong></label>
-              <input type="text" name="cargo" required placeholder="Cargo">
-          
-              <button type="submit" class="btn">Adicionar</button>
+              <input id="cargo1" type="text" name="cargo" required placeholder="Cargo">
+
+              <button type="submit" class="btn" onclick="salvarInfoVendedor()">Adicionar</button>
               
               <button type="submit" class="btn cancel" onclick="closeForm('formulario_vendedor')">Cancelar</button>
             </form>
@@ -133,16 +127,15 @@
         <div class="form-popup" id="formulario_clientes">
             <form class="form-container">                       
               <label for="Nome"><b>Nome:</b></label>
-              <input type="text" placeholder="Nome" name="Nome" required>
-          
+              <input id="nomeCliente"type="text" placeholder="Nome" name="Nome" required>
               <label for="endereco"><b>Endereço:</b></label>
-              <input type="text" placeholder="Endereço" name="endereco" required>
+              <input id="addressCliente" type="text" placeholder="Endereço" name="endereco" required>
               <label for="telefone"><strong>Telefone:</strong></label>
-              <input type="tel" name="telefone_cliente" required placeholder="Telefone">
+              <input id="telefoneCliente" type="tel" name="telefone_cliente" required placeholder="Telefone">
               <label for="email"><strong>E-mail:</strong></label>
-              <input type="email" name="email_cliente" required placeholder="E-mail">
+              <input id="emailCliente" type="email" name="email_cliente" required placeholder="E-mail">
           
-              <button type="submit" class="btn">Adicionar</button>
+              <button type="submit" class="btn" onclick="salvarInfoCliente()">Adicionar</button>
               
               <button type="submit" class="btn cancel" onclick="closeForm('formulario_clientes')">Cancelar</button>
             </form>
@@ -180,45 +173,46 @@
             </tr>
           </table>
     </span>
-
-    <span id="Vendas" class="conteudo_tela">        
-      <!--<p id="a"> Loja Data de vendas Hórario Vendedor Cliente Valor Total </p>-->
-       <table id="vendatabela">
-        <tr class="formatacao_tabela">
-          <th>Loja</th>
-          <th>Data de Vendas</th>
-          <th>Hórario</th>
-          <th>Vendedor</th>
-          <th>Cliente</th>
-          <th>Valor total</th>
-        </tr>
-        <tr>
-          <td>Garutti</td>
-          <td> 12/12/12</td>
-          <td>20:48</td>
-          <td>Matheus</td>
-          <td>Gustavo</td>
-          <td>R$534,34</td>
- 
-        </tr>
-        <tr>
-            <td>Garutti</td>
-            <td> 12/12/14</td>
-            <td>20:41</td>
-            <td>Matheus</td>
-            <td>Gustavo</td>
-            <td>R$534,34</td>
-   
-          </tr>
-      </table>
+<span id="Vendas">
+  <div class="vendas-wrapper" style="border: 3px solid black; border-radius: 5px;">
+    <div class="loja-elemnt">
+      <label>Loja: </label><span id="Loja">
+      <select class="selectLoja">
+        <option value="Loja">AAA</option>
+      </select></div>
+      <div class="loja-elemnt">
+      <br><label>Vendedor: </label>
+      <select class="selectLoja">
+        <option value="Vendedor">FASDEA</option>
+      </select></div>
+      <div class="loja-elemnt">
+      <br><label>Clientes: </label>
+      <select class="selectLoja">
+        <option value="Cliente">FASDEA</option>
+      </select></div>
+      <div class="loja-elemnt">
+      <br><label>Produtos: </label><select class="selectLoja">
+        <option value="Produtos">Cara para pf</option>
+      </select></div>
+      <div class="loja-elemnt" style="align-content: center;">
+        <label>Detalhes da venda:</label>
+      <input type="text" name="detalhes">
+      </div>
+      <div id="valor-total">
+      <p>Valor Total: R$0,00</p>
+        </div>
+      <button class="botoesLoja" style="background-color: black; border: 2px; border-radius: 2px;"><span style="color: white;">Confirmar</span></button>
+      <button class="botoesLoja" style="background-color: black; border: 2px; border-radius: 2px;"><span style="color: white;">Limpar</span></button>
+      <button class="botoesLoja" style="background-color: black; border: 2px; border-radius: 2px;"><span style="color: white;">Voltar</button>
     </span>
-    
+      </div>
+</span>
     <span id="Relatorio" class="conteudo_tela">
-        
+    
     </span>
     
     
     <script src="setup.js"></script>
-    <h3>Garutti | Av. Mauro Ramos 165 | CNPJ:35.372.238/2736-78 | (48) 99116-4826 | garuttinho@contato.com</h3>
+    <h3>Garutti | Av. Mauro Ramos 165 | CNPJ: 35.372.238/2736-78 | (48) 99116-4826 | garuttinho@contato.com</h3>
 </body>
 </html>
