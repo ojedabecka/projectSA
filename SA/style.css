@@ -9,9 +9,9 @@
   top:355px;
    
 }
+}
 .form-popup {
-  display: none;  
-  
+  display: none;
 }
 .botoesLoja:hover{
   cursor: pointer;
@@ -19,11 +19,19 @@
 .botoesLoja{
   align-content: center;
 }
+.botoesLojaDiv{
+  text-align: center;
+}
 .selectLoja{
   text-align: center;
 }
 .loja-elemnt{
   text-align: center;
+}
+.vendas-wrapper{
+  text-align: center;
+  margin-top: -40px;
+  font-family: Fira Sans;
 }
 .form-container {
   max-width: 300px;
@@ -280,7 +288,7 @@ background-color:lightblue;
 
 }
 /*Edição em bloco da vendas*/ 
-#lojatabela,#estoquetabela,#vendedortabela,#clientabela,#vendatabela,#clientetabela{
+#lojatabela,#estoquetabela,#vendedortabela,#clientabela,#vendatabela,#clientetabela,#relatorioTabela{
   background:black;
   color:white;
   margin:auto;

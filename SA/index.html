@@ -12,11 +12,11 @@
 </head>
 <body>
   <h1><img src=droga.png></h1>
-    <button class="class_menu" onclick="selecionarTela('Estoque', this, '#00a3cc')"id="default">Estoque</button>
+    <button class="class_menu" onclick="selecionarTela('Estoque', this, '#00a3cc')">Estoque</button>
     <button class="class_menu" onclick="selecionarTela('Loja', this,  '#00a3cc')" >Filiais</button>
     <button class="class_menu" onclick="selecionarTela('Vendedor', this,  '#00a3cc')">Vendedor</button>
     <button class="class_menu" onclick="selecionarTela('Cliente', this,  '#00a3cc')">Cliente</button>
-    <button class="class_menu" onclick="selecionarTela('Vendas', this,  '#00a3cc')">Vendas</button>
+    <button class="class_menu" onclick="selecionarTela('Vendas', this,  '#00a3cc')"id="default">Vendas</button>
     <button class="class_menu" onclick="selecionarTela('Relatorio', this,  '#00a3cc')">Relatório</button>
     
     <span id="Estoque" class="conteudo_tela">
@@ -149,66 +149,78 @@
             </tr>
             <tr>
               <td>Lucas Nunes</td>
-              <td> Praia Mole</td>
-              <td>(48)99867-1150</td>
+              <td>Praia Mole</td>
+              <td>(48) 99867-1150</td>
               <td>Matheuscoelho70@gmail.com</td>
             </tr>
             <tr>
               <td>Alice Freitas</td>
               <td>Campeche</td>
-              <td>(48)9213-8238</td>
+              <td>(48) 9213-8238</td>
               <td>alicezinha@gmail.com</td>
             </tr>
             <tr>
               <td>Brenda Campos</td>
               <td>Trindade</td>
-              <td>(48)8789-5468</td>
+              <td>(48) 8789-5468</td>
               <td>camposbrendaa@gmail.com</td>
             </tr>
                         <tr>
               <td>Luis Pereira</td>
               <td>Centro</td>
-              <td>(48)7983-2372</td>
+              <td>(48) 7983-2372</td>
               <td>luizinho@gmail.com</td>
             </tr>
           </table>
     </span>
-<span id="Vendas">
-  <div class="vendas-wrapper" style="border: 3px solid black; border-radius: 5px;">
+<span id="Vendas" class="conteudo_tela">
+  <div class="vendas-wrapper">
     <div class="loja-elemnt">
       <label>Loja: </label><span id="Loja">
-      <select class="selectLoja">
+      <select class="selectLoja" id="lojaSelect">
         <option value="Loja">AAA</option>
       </select></div>
       <div class="loja-elemnt">
       <br><label>Vendedor: </label>
-      <select class="selectLoja">
+      <select class="selectLoja" id="vendedorSelect">
         <option value="Vendedor">FASDEA</option>
       </select></div>
       <div class="loja-elemnt">
       <br><label>Clientes: </label>
-      <select class="selectLoja">
+      <select class="selectLoja" id="clienteSelect">
         <option value="Cliente">FASDEA</option>
       </select></div>
       <div class="loja-elemnt">
-      <br><label>Produtos: </label><select class="selectLoja">
+      <br><label>Produtos: </label><select class="selectLoja" id="produtosSelect">
         <option value="Produtos">Cara para pf</option>
       </select></div>
       <div class="loja-elemnt" style="align-content: center;">
         <label>Detalhes da venda:</label>
-      <input type="text" name="detalhes">
+      <textarea name="detalhes" cols="40" rows="5" id="detalhesInput" style="text-align: left; align-content: left;">
+          </textarea>
       </div>
       <div id="valor-total">
-      <p>Valor Total: R$0,00</p>
+      <p style="text-align: center;">Valor Total: R$0,00</p>
         </div>
-      <button class="botoesLoja" style="background-color: black; border: 2px; border-radius: 2px;"><span style="color: white;">Confirmar</span></button>
-      <button class="botoesLoja" style="background-color: black; border: 2px; border-radius: 2px;"><span style="color: white;">Limpar</span></button>
-      <button class="botoesLoja" style="background-color: black; border: 2px; border-radius: 2px;"><span style="color: white;">Voltar</button>
+        <div class="botoesLojaDiv">
+      <button class="botoesLoja" onclick="salvarInfoVendas()" style="background-color: black; border: 2px; border-radius: 5px;"><span style="color: white;">Confirmar</span></button>
+      <button class="botoesLoja" onclick="document.getElementById('detalhesInput').value = ''" style="background-color: black; border: 2px; border-radius: 2px;"><span style="color: white;">Limpar</span></button></div>
     </span>
-      </div>
+    </div>
 </span>
     <span id="Relatorio" class="conteudo_tela">
-    
+      <div id="tabelaRelatorio">
+        <table id="relatorioTabela">
+          <tr class="formatacao_tabela">
+          <th>Loja</th>
+          <th>Vendedor</th>
+          <th>Clientes</th>
+          <th>Produtos</th>
+          <th>Detalhes da venda</th>
+          <th>Hora da Transação</th>
+          <tr id="partirDaqui"></tr>
+        </table>
+      </div>
     </span>
     
     
