@@ -3,7 +3,7 @@
   color: white;
   padding: 5px 10px;
   border: none;
-  cursor: pointer;
+  
 }
 #apagar_venda{
   background-color: black;
@@ -31,13 +31,18 @@ select{
 } 
 .titulo-registro{
   font-weight: bold;
+  line-height:30px;
+ 
 }
 #ver-cadastro-wrapper{
   max-width: 300px;
-  padding: 10px;
+  padding: 10px;  
   background-color: #3094b4;
   margin:auto;
+  margin-top:95px;
   width: 50%;
+  border-radius:8px;
+  
 }
 #ver-cadastro-wrapper input[type=text],#ver-cadastro-wrapper input[type=date]{
   width: 100%;
@@ -45,6 +50,7 @@ select{
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
+  
 }
 input[type=button],button {
   background-color: black;
@@ -52,13 +58,18 @@ input[type=button],button {
   padding: 10px 20px;
   border: none;
   cursor: pointer;   
+  margin-top:10px;
 }
 #botao-insere-registro{
   background-color: black;
   color: white;
   padding: 16px 20px;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
+  margin:auto;
+  margin-top:15px;
+  margin-left:30px;
+  
   
 }
 #botao-insere-registro:hover, #insere_ok:hover, #insere_cancela:hover,input[type=button]:hover{
@@ -88,6 +99,7 @@ input[type=button],button {
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
+  
 }
 .form-container .btn {
   background-color: #60c8ea;
@@ -194,7 +206,12 @@ h3 {
 background-color:lightblue;
 }
 
-#Relatorio{background-color:lightblue;}
+#Relatorio{
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  background-color:lightblue;}
 #Estoque{background-color:lightblue;}
 #Vendas{
   background-color:lightblue;
@@ -205,6 +222,7 @@ background-color:lightblue;
   background:black;
   color:white;
   margin:auto;
+  margin-top:10px;
 }
 
 td{
@@ -218,6 +236,7 @@ td{
 .lista-linha-pointer {
 	cursor: pointer;
 }
+
 
 #Vendedor{background-color:lightblue;}
 #Cliente{background-color:lightblue;}
