@@ -1,77 +1,93 @@
-
-.open-button {
+.botoes-ver-cadastro{
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+#apagar_venda{
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+#nota-entry{
+  text-align: justify;  
+}
+select{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+#quant-produto{
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+} 
+.titulo-registro{
+  font-weight: bold;
+}
+#ver-cadastro-wrapper{
+  max-width: 300px;
+  padding: 10px;
+  background-color: #3094b4;
+  margin:auto;
+  width: 50%;
+}
+#ver-cadastro-wrapper input[type=text],#ver-cadastro-wrapper input[type=date]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=button],button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;   
+}
+#botao-insere-registro{
   background-color: black;
   color: white;
   padding: 16px 20px;
   border: none;
+  cursor: pointer; 
+  
+}
+#botao-insere-registro:hover, #insere_ok:hover, #insere_cancela:hover,input[type=button]:hover{
+  opacity: 0.8;
+
+}
+#insere_ok{
+  background-color: #60c8ea;
+  color: white;
+  padding: 16px 20px;
+  border: none;
   cursor: pointer;
-  position: absolute;
-  top:355px;
-   
-}
-.form-popup {
-  display: none;  
-  
-}
-.form-container {
-  max-width: 300px;
-  position: absolute;
-  padding: 10px;
-  background-color: #3094b4;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  margin-top: 50px; 
-}
-.form-container input[type=text] {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
 }
-.form-container input[type=tel]{
+#insere_cancela{
+  background-color: #00000070;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
   width: 100%;
+  margin-bottom: 5px;
+}
+.visualizar-registro visualizar-{
+  width: 20%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
-  
-}
-.form-container input[type=number]{
-  width: 90%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  
-}
-.form-container input[type=url]{
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  
-}
-.form-container input[type=email]{
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  
-}
-.form-container input[type=date]{
-  width: 90%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  
-}
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
 }
 .form-container .btn {
   background-color: #60c8ea;
@@ -101,7 +117,7 @@ body, html {
   background-color:lightblue;
   margin-top:0%;
 }
-input[type=text], input[type=tel], input[type=url], input[type=email] {
+input[type=text], input[type=tel], input[type=url], input[type=email], input[type=date] {
   width: 20%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -109,6 +125,7 @@ input[type=text], input[type=tel], input[type=url], input[type=email] {
   border: 1px solid #ccc;
   box-sizing: border-box;
   align-content: center;
+
 }
 
 h1 {
@@ -121,79 +138,6 @@ h3 {
   background-color: #79aab7;
   margin-bottom: 0px;
   font-size: 18px;
-}
-
-.add{
-    background-color: #7fb3e0;
-    border: none;
-    color: white;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
-} 
-
-.addcliente{
-    background-color: #7fb3e0;
-    border: none;
-    color: white;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
-}
-.addvendedor{
-    background-color: #7fb3e0;
-    border: none;
-    color: white;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
-}
-#adc:hover {
-  cursor:pointer;
-}
-
-#voltar{
-  background-color: #7fb3e0;
-  border: none;
-  color: white;
-  padding: 5px 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 8px;
-}
-#voltar:hover{
-  cursor:pointer;
-} 
-
-#enviar{
-  background-color: #7fb3e0;
-  border: none;
-  color: white;
-  padding: 5px 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 8px;
-}
-
-#enviar:hover{
-  cursor:pointer;
-}
-
-.add:hover{
-  opacity: 0.9;
 }
 
 /* Style tab links */
